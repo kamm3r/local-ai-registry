@@ -1,0 +1,70 @@
+{
+ "recipe": {
+  "model": "qwen3.8-27b",
+  "weights": "turboderp/Qwen3.8-27B-exl3@4acd9ad5af224ec9e8815a54d71a033f378a7e9d",
+  "engine": "exllamav3-rocm-qwen3.8-27b-exl3-4.0bpw-mtp-vision-128k-rx-7900-xtx-24gb@dc899e3cb034",
+  "set": {},
+  "card": "rx-7900-xtx-24gb"
+ },
+ "where": {
+  "on": "owner",
+  "gpu": "AMD Radeon RX 7900 XTX 24GB (owner: Nobara 44, kernel 7.2, ROCm 10.0 from pip, gfx1100)"
+ },
+ "passed": true,
+ "proof": {
+  "at": "2026-10-20",
+  "on": "owner",
+  "gpu": "AMD Radeon RX 7900 XTX 24GB (owner: Nobara 44, kernel 7.2, ROCm 10.0 from pip, gfx1100)",
+  "launch_sha256": "1f2551ec4b7238d9851eb337f79f80cdf98a76c44400db298182a9d9031ce440",
+  "gates": "load chat reasoning tools context speed",
+  "tps": 82.5,
+  "prefill": 894,
+  "served": "Qwen3.8-27B-exl3-SC4.0"
+ },
+ "evidence": {
+  "ok": {
+   "load": true,
+   "chat": true,
+   "reasoning": true,
+   "tools": true,
+   "context": true,
+   "speed": true
+  },
+  "chat": {
+   "content": "\n\nRed, yellow, blue",
+   "finish": "stop"
+  },
+  "reasoning": {
+   "thinking_chars": 171,
+   "content": "\n\n391"
+  },
+  "tools": {
+   "call": [
+    {
+     "id": "call_cc444e1592674f94b6d9d449",
+     "function": {
+      "name": "get_weather",
+      "arguments": "{\"city\": \"Paris\"}"
+     },
+     "type": "function",
+     "index": 0
+    }
+   ],
+   "reply": "\n\nIt's currently **17°C** in Paris with **overcast** skies. 🌥️",
+   "finish": "stop",
+   "calls_again": 0,
+   "thinking_chars": 111
+  },
+  "context": {
+   "prompt_tokens": 106294,
+   "seconds": 118.9,
+   "content": "\n\n58213"
+  },
+  "speed": {
+   "window_s": 30,
+   "tokens_total": 8658,
+   "seconds_total": 103.3
+  }
+ },
+ "launch_config_sha256": "71992bcca9baa2bb7b8ec78bd65b6058ada33518b845913d581c7befa897916d"
+}
