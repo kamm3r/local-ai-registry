@@ -2,7 +2,8 @@ Probe notes for the two 256K EXL3 runs (2026-10-20, rx-7900-xtx-24gb)
 =====================================================================
 
 Each run has its own `rx-7900-xtx-24gb.20261020.exl3-256k-<4.0|3.0>bpw.probe.json`, the raw output of the kit's
-`tools/probe.py`, taken before the server started.
+`tools/probe.py`, taken before the server started, except that `storage.path` is shortened to `~/models` (the models
+folder was in a scratch directory on the same disk).
 Two kit tools needed a workaround on this machine; neither changes what was measured.
 
 probe.py and an installed nvidia-smi
