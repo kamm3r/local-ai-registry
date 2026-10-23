@@ -12,7 +12,7 @@
   "swap_used_gb": 7.27
  },
  "storage": {
-  "path": "~/.t3/scratch/2026-10-19-can-you-figure-out-how-7ca4d422/final-install/models",
+  "path": "~/models",
   "free_gb": 106.39,
   "total_gb": 1962.62,
   "device": "/dev/nvme0n1p3",

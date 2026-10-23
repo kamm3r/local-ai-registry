@@ -1,8 +1,9 @@
 Probe notes for this run (2026-10-20, rx-7900-xtx-24gb)
 =====================================================
 
-`probe.json` is the raw output of the kit's `tools/probe.py`, taken before the server started. Two kit tools
-needed a workaround on this machine; neither changes what was measured.
+`probe.json` is the raw output of the kit's `tools/probe.py`, taken before the server started, except that
+`storage.path` is shortened to `~/models` (the models folder was in a scratch directory on the same disk).
+Two kit tools needed a workaround on this machine; neither changes what was measured.
 
 probe.py and an installed nvidia-smi
 ------------------------------------
